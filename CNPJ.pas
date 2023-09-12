@@ -16,6 +16,8 @@ type
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
     Label1: TLabel;
+    Label2: TLabel;
+    infos: TLabel;
     procedure Button1Click(Sender: TObject);
 
 type
@@ -192,7 +194,7 @@ procedure TFormCNPJ.Button1Click(Sender: TObject);
 var
   DADOSCNPJ: TRoot;
 begin
-// Configurar o RESTRequest para fazer a solicitação GET à API
+// Configurar o RESTRequest para fazer a solicitaÃ§Ã£o GET Ã  API
 
 //  RESTClient1.BaseURL := 'https://publica.cnpj.ws';
 
@@ -200,21 +202,24 @@ begin
   RESTRequest1.Resource := 'cnpj/'+Edit1.Text; // Substitua pelo CNPJ desejado
 
   try
-    // Executar a solicitação
+    // Executar a solicitaÃ§Ã£o
     RESTRequest1.Execute;
 
-    // Verificar se a solicitação foi bem-sucedida
+    // Verificar se a solicitaÃ§Ã£o foi bem-sucedida
     if RESTResponse1.StatusCode = 200 then
     begin
       // Converter a resposta JSON em um objeto Delphi
       DADOSCNPJ := TJson.JsonToObject<TRoot>(RESTResponse1.Content);
 
-      // Agora você pode acessar os dados da consulta, por exemplo:
-      ShowMessage('Razão Social: ' + DADOSCNPJ.RazaoSocial);
+      // Agora vocÃª pode acessar os dados da consulta, por exemplo:
+      infos.Caption := 'RazÃ£o: '+DADOSCNPJ.RazaoSocial + sLineBreak + sLineBreak +'Fantasia: '+ DADOSCNPJ.Estabelecimento.NomeFantasia
+      + sLineBreak +sLineBreak +
+      'Cep: '+DADOSCNPJ.Estabelecimento.Cep+ sLineBreak +sLineBreak + 'Cidade: '+UpperCase(DADOSCNPJ.Estabelecimento.Cidade.Nome) ;
+
     end
     else
     begin
-      ShowMessage('Erro na solicitação: ' + RESTResponse1.StatusText);
+      ShowMessage('Erro na solicitaÃ§Ã£o: ' + RESTResponse1.StatusText);
     end;
   except
     on E: Exception do
