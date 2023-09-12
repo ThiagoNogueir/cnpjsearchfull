@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/12 18:00:40.000.248,=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 18:05:08.000.646,C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\CNPJ.pas=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 18:05:08.000.646,C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\CNPJ.dfm=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/09/12 18:05:21.000.489,C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\ConsultaCNPJ.dproj=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/09/12 18:10:41.000.835,=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:16:13.396,=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\ConsultasCPFCNPJ.pas</Transaction>
+    <Transaction>2023/09/12 19:16:13.450,=C:\Users\Thiago\Documents\Embarcadero\Studio\Projects\ConsultaCNPJ\Pkg.Json.DTO.pas</Transaction>
+  </Transactions>
+</BorlandProject>
